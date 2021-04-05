@@ -8,12 +8,7 @@ class SwapiAPI extends RESTDataSource {
 
   async getPeople() {
     const response = await this.get("people");
-
-    return Array.isArray(response.results)
-      ? response.results.map((person) => {
-          this.personReducer(person);
-        })
-      : [];
+    return response;
   }
 
   personReducer(person) {

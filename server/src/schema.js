@@ -19,8 +19,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    people: People
-    person(name: String): Person
+    people(name: String): People
+    person: Person
   }
 `;
 

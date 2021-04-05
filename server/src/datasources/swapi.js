@@ -6,8 +6,8 @@ class SwapiAPI extends RESTDataSource {
     this.baseURL = "https://swapi.dev/api/";
   }
 
-  async getPeople() {
-    const response = await this.get("people");
+  async getPeople({ name }) {
+    const response = await this.get("people", { search: name });
     return response;
   }
 
